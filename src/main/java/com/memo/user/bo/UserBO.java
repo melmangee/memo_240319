@@ -8,12 +8,12 @@ import com.memo.user.repository.UserRepository;
 
 @Service
 public class UserBO {
-
+	
 	@Autowired
 	private UserRepository userRepository;
 	
-	//input: login
-	//output: UserEntity 채워져 있거나 null
+	// input: login
+	// output: UserEntity 채워져 있거나 null
 	public UserEntity getUserEntityByLoginId(String loginId) {
 		return userRepository.findByLoginId(loginId);
 	}
